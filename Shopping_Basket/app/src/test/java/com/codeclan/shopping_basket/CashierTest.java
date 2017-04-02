@@ -52,4 +52,10 @@ public class CashierTest {
         cashier.setDiscountedType(ItemType.FRUIT);
         assertEquals(ItemType.FRUIT,cashier.getDiscountedType());
     }
+
+    @Test
+    public void canGetAndSetOfferThreshold(){
+        cashier.setThreshold(20);
+        assertEquals(20,cashier.getThreshold());
+    }
 }

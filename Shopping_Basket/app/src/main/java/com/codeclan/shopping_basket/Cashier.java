@@ -39,4 +39,6 @@ public class Cashier {
     public void setDiscountedType(ItemType discountedType) {
         this.discountedType = discountedType;
     }
+
+
 }
