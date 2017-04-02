@@ -31,4 +31,14 @@ public class ProductTest {
         assertEquals(ItemType.FRUIT,pear.getType());
         assertEquals(ItemType.ELECTRICAL,earphones.getType());
     }
+
+    public void testDelta(){
+        assertEquals(0.5,0.5,0.001);
+    }
+
+    @Test
+    public void canGetPrice(){
+        assertEquals(0.5,pear.getPrice(),0.001);
+        assertEquals(30,earphones.getPrice(),0.001);
+    }
 }
