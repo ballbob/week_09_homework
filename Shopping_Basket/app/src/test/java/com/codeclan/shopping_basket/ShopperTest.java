@@ -24,6 +24,6 @@ public class ShopperTest {
 
     @Test
     public void testgetName(){
-        assertEquals("Kevin",getName());
+        assertEquals("Kevin",shopper.getName());
     }
 }
