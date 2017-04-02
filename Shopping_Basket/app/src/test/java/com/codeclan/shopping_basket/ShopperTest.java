@@ -26,4 +26,9 @@ public class ShopperTest {
     public void testgetName(){
         assertEquals("Kevin",shopper.getName());
     }
+
+    @Test
+    public void basketStartsEmpty(){
+        assertEquals(0,shopper.numItems());
+    }
 }
