@@ -32,4 +32,8 @@ public class Shopper {
     public void remove(Product item){
         basket.remove(item);
     }
+
+    public void empty(){
+        basket.clear();
+    }
 }

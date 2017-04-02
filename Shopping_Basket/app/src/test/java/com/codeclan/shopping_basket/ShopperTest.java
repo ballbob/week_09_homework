@@ -52,4 +52,9 @@ public class ShopperTest {
         shopper.empty();
         assertEquals(0,shopper.numItems());
     }
+
+    @Test
+    public void canTestLoyalty(){
+        assertEquals(true,shopper.loyalty());
+    }
 }
