@@ -23,4 +23,8 @@ public class Cashier {
         return this.name;
     }
 
+    public int numItems(){
+        return this.items.size();
+    }
+
 }

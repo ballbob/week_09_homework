@@ -34,6 +34,6 @@ public class CashierTest {
 
     @Test
     public void cashierBeginsWithNoItems(){
-        assertEquals(0,cashier.numItems);
+        assertEquals(0,cashier.numItems());
     }
 }
