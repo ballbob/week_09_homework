@@ -3,6 +3,8 @@ package com.codeclan.shopping_basket;
 import org.junit.Before;
 import org.junit.Test;
 
+import static junit.framework.Assert.*;
+
 /**
  * Created by user on 02/04/2017.
  */
