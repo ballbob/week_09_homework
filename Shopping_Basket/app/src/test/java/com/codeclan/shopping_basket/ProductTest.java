@@ -15,7 +15,7 @@ public class ProductTest {
     @Before
     public void before(){
         pear = new Product("pear", ItemType.FRUIT, 0.5);
-        earphones = new Product("earphones", ItemType.ELECTRONIC, 30);
+        earphones = new Product("earphones", ItemType.ELECTRICAL, 30);
     }
 
     @Test
