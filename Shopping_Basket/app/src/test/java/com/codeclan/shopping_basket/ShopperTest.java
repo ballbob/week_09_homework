@@ -14,12 +14,14 @@ public class ShopperTest {
     Product pear;
     Product earphones;
     Shopper shopper;
+    Shopper disloyalShopper;
 
     @Before
     public void before(){
         pear = new Product("pear", ItemType.FRUIT, 0.5);
         earphones = new Product("earphones", ItemType.ELECTRICAL, 30);
         shopper = new Shopper("Kevin",true);
+        disloyalShopper = new Shopper("Judas",false);
     }
 
     @Test
@@ -56,5 +58,10 @@ public class ShopperTest {
     @Test
     public void canTestLoyalty(){
         assertEquals(true,shopper.getLoyalty());
+    }
+
+    @Test
+    public void canTestDisloyalty(){
+        assertEquals(false,disloyalShopper.getLoyalty());
     }
 }
