@@ -31,4 +31,9 @@ public class CashierTest {
     public void canGetName(){
         assertEquals("Etienne",cashier.getName());
     }
+
+    @Test
+    public void cashierBeginsWithNoItems(){
+        assertEquals(0,cashier.numItems);
+    }
 }

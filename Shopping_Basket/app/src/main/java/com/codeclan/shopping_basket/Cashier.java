@@ -23,5 +23,4 @@ public class Cashier {
         return this.name;
     }
 
-
 }
