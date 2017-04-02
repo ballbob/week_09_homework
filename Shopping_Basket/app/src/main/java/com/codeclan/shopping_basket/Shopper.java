@@ -14,42 +14,28 @@ public class Shopper {
     private boolean loyalty;
     private ItemType discountedType;
     private int offerThreshold;
+    private double sumTotal;
 
 
     public Shopper(String name, boolean loyalty){
         this.name = name;
         this.basket = new ArrayList<Product>();
         this.loyalty = loyalty;
+        this.sumTotal = 0;
     }
 
+    //getters and setters
     public String getName(){
         return this.name;
     }
 
-    public int numItems(){
-        return this.basket.size();
-    }
-
-    public void add(Product item){
-        basket.add(item);
-    }
-
-    public void remove(Product item){
-        basket.remove(item);
-    }
-
-    public void empty(){
-        basket.clear();
+    public double getSumTotal(){
+        return this.sumTotal;
     }
 
     public boolean getLoyalty(){
         return this.loyalty;
     }
-
-    public ArrayList<Product> getBasket(){
-        return this.basket;
-    }
-
 
     public ItemType getDiscountedType() {
         return discountedType;
@@ -67,13 +53,47 @@ public class Shopper {
         this.offerThreshold = threshold;
     }
 
+    //basket
+    public int numItems(){
+        return this.basket.size();
+    }
+
+    public void add(Product item){
+        basket.add(item);
+    }
+
+    public void remove(Product item){
+        basket.remove(item);
+    }
+
+    public void empty(){
+        basket.clear();
+    }
+
+    //price
     public double basicTotal(){
-        double sumTotal = 0;
         for (Product item : basket){
             sumTotal = sumTotal + item.getPrice();
         }
         return sumTotal;
     }
+
+    public int numberOfType(){
+        int typeCount = 0;
+        for (Product item : basket){
+            if (item.getType() == discountedType){
+                typeCount ++;
+            }
+        }
+        return typeCount;
+    }
+
+    public void thresholdTotal(){
+        if (sumTotal >= offerThreshold){
+            sumTotal = sumTotal * 0.9;
+        }
+    }
+
 
 
 }

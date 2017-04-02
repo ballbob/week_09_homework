@@ -24,6 +24,8 @@ public class ShopperTest {
         earphones = new Product("earphones", ItemType.ELECTRICAL, 30);
         shopper = new Shopper("Kevin",true);
         disloyalShopper = new Shopper("Judas",false);
+
+        shopper.setDiscountedType(ItemType.FRUIT);
     }
 
     @Test
@@ -98,6 +100,21 @@ public class ShopperTest {
         shopper.add(pear);
         shopper.add(mango);
         assertEquals(2,shopper.numberOfType());
+    }
+
+    @Test
+    public void sumTotalStartsEmpty(){
+        assertEquals(0,shopper.getSumTotal(),0.001);
+    }
+
+    @Test
+    public void canChangePriceAtThreshold(){
+        shopper.add(pear);
+        shopper.add(mango);
+        shopper.add(earphones);
+        shopper.basicTotal();
+        shopper.thresholdTotal();
+        assertEquals(28.8,shopper.getSumTotal(),0.001);
 
     }
 }
