@@ -135,5 +135,32 @@ public class ShopperTest {
         assertEquals(32,disloyalShopper.getSumTotal(),0.001);
     }
 
+//    @Test
+//    public void canAddCostOfHalfPriceItems(){
+//        shopper.add(pear);
+//        shopper.add(mango);
+//        shopper.discountedTypeTotal();
+//
+//        assertEquals(1,shopper.getSumTotal(),0.001);
+//        assertEquals(0,shopper.numItems());
+//    }
+
+    @Test
+    public void canAdjustCostForLoyaltyAndThreshold(){
+        shopper.empty();
+        shopper.add(pear);
+        shopper.add(mango);
+        shopper.add(earphones);
+        shopper.adjustedTotal();
+
+        disloyalShopper.empty();
+        disloyalShopper.add(pear);
+        disloyalShopper.add(mango);
+        disloyalShopper.add(earphones);
+        disloyalShopper.adjustedTotal();
+
+        assertEquals(28.22,shopper.getSumTotal(),0.01);
+        assertEquals(28.8,disloyalShopper.getSumTotal(),0.01);
+    }
 
 }
