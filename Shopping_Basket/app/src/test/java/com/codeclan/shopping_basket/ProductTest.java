@@ -25,4 +25,10 @@ public class ProductTest {
         assertEquals("pear",pear.getName());
         assertEquals("earphones",earphones.getName());
     }
+
+    @Test
+    public void canGetType(){
+        assertEquals(ItemType.FRUIT,pear.getType());
+        assertEquals(ItemType.ELECTRICAL,earphones.getType());
+    }
 }
