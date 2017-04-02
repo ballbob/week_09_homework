@@ -32,4 +32,11 @@ public class Cashier {
         this.items.addAll(shopper.getBasket());
     }
 
+    public ItemType getDiscountedType() {
+        return discountedType;
+    }
+
+    public void setDiscountedType(ItemType discountedType) {
+        this.discountedType = discountedType;
+    }
 }

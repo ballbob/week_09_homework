@@ -49,7 +49,7 @@ public class CashierTest {
 
     @Test
     public void canGetAndSetDiscountedType(){
-        shopper.setDiscountedType(ItemType.FRUIT);
-        assertEquals(ItemType.FRUIT,shopper.getDiscountedType());
+        cashier.setDiscountedType(ItemType.FRUIT);
+        assertEquals(ItemType.FRUIT,cashier.getDiscountedType());
     }
 }
