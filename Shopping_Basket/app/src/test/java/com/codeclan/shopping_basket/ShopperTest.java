@@ -37,4 +37,11 @@ public class ShopperTest {
         shopper.add(pear);
         assertEquals(1,shopper.numItems());
     }
+
+    @Test
+    public void canRemoveItem(){
+        shopper.add(pear);
+        shopper.remove(pear);
+        assertEquals(0,shopper.numItems());
+    }
 }
