@@ -31,4 +31,10 @@ public class ShopperTest {
     public void basketStartsEmpty(){
         assertEquals(0,shopper.numItems());
     }
+
+    @Test
+    public void canAddItem(){
+        shopper.add(pear);
+        assertEquals(1,shopper.numItems());
+    }
 }
