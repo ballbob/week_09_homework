@@ -21,5 +21,8 @@ public class Shopper {
         return this.name;
     }
 
+    public int numItems(){
+        return this.basket.size();
+    }
 
 }
