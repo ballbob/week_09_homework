@@ -19,4 +19,8 @@ public class Product {
         return this.name;
     }
 
+    public ItemType getType(){
+        return this.type;
+    }
+
 }
