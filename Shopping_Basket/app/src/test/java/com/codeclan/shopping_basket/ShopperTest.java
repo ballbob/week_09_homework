@@ -64,4 +64,11 @@ public class ShopperTest {
     public void canTestDisloyalty(){
         assertEquals(false,disloyalShopper.getLoyalty());
     }
+
+    @Test
+    public void canGetBasket(){
+        shopper.add(pear);
+        shopper.add(earphones);
+        assertEquals(0,shopper.getBasket());
+    }
 }

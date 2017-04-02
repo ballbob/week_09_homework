@@ -28,5 +28,9 @@ public class Cashier {
         return this.items.size();
     }
 
+    public void handOver(Shopper shopper){
+
+    }
+
 
 }

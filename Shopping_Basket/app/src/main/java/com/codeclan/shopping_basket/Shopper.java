@@ -42,4 +42,8 @@ public class Shopper {
     public boolean getLoyalty(){
         return this.loyalty;
     }
+
+    public ArrayList<Product> getBasket(){
+        return this.basket;
+    }
 }
