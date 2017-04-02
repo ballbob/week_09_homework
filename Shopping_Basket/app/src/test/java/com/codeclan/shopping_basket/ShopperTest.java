@@ -83,4 +83,11 @@ public class ShopperTest {
         shopper.setThreshold(20);
         assertEquals(20,shopper.getThreshold());
     }
+
+    @Test
+    public void canGetBasicTotal(){
+        shopper.add(pear);
+        shopper.add(earphones);
+        assertEquals(30.5,shopper.basicTotal());
+    }
 }

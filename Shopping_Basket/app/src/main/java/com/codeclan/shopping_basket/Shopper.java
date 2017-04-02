@@ -66,4 +66,8 @@ public class Shopper {
     public void setThreshold(int threshold) {
         this.offerThreshold = threshold;
     }
+
+
+
+
 }
