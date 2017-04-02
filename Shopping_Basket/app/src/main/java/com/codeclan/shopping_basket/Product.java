@@ -23,4 +23,8 @@ public class Product {
         return this.type;
     }
 
+    public double getPrice(){
+        return this.price;
+    }
+
 }
