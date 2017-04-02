@@ -40,5 +40,11 @@ public class Cashier {
         this.discountedType = discountedType;
     }
 
+    public int getThreshold() {
+        return offerThreshold;
+    }
 
+    public void setThreshold(int threshold) {
+        this.offerThreshold = threshold;
+    }
 }
