@@ -44,4 +44,12 @@ public class ShopperTest {
         shopper.remove(pear);
         assertEquals(0,shopper.numItems());
     }
+
+    @Test
+    public void canEmptyBasket(){
+        shopper.add(pear);
+        shopper.add(earphones);
+        shopper.empty();
+        assertEquals(0,shopper.numItems());
+    }
 }
