@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class Cashier {
 
     private Product item;
+    private Shopper shopper;
     private String name;
     private ArrayList<Product> items;
     private ItemType discountedType;
@@ -26,5 +27,6 @@ public class Cashier {
     public int numItems(){
         return this.items.size();
     }
+
 
 }

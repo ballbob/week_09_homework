@@ -36,4 +36,12 @@ public class CashierTest {
     public void cashierBeginsWithNoItems(){
         assertEquals(0,cashier.numItems());
     }
+
+    @Test
+    public void canGetItemsFromShopper(){
+        shopper.add(mango);
+        shopper.add(pear);
+        cashier.handOver(shopper);
+        assertEquals(2,cashier.numItems());
+    }
 }
