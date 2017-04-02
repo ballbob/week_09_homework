@@ -71,4 +71,16 @@ public class ShopperTest {
 //        shopper.add(earphones);
 //        assertEquals(0,shopper.getBasket());
 //    }
+
+    @Test
+    public void canGetAndSetDiscountedType(){
+        shopper.setDiscountedType(ItemType.FRUIT);
+        assertEquals(ItemType.FRUIT,shopper.getDiscountedType());
+    }
+
+    @Test
+    public void canGetAndSetOfferThreshold(){
+        shopper.setThreshold(20);
+        assertEquals(20,shopper.getThreshold());
+    }
 }

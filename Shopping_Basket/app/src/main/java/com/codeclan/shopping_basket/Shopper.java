@@ -12,6 +12,9 @@ public class Shopper {
     private Product item;
     private ArrayList<Product> basket;
     private boolean loyalty;
+    private ItemType discountedType;
+    private int offerThreshold;
+
 
     public Shopper(String name, boolean loyalty){
         this.name = name;
@@ -45,5 +48,22 @@ public class Shopper {
 
     public ArrayList<Product> getBasket(){
         return this.basket;
+    }
+
+
+    public ItemType getDiscountedType() {
+        return discountedType;
+    }
+
+    public void setDiscountedType(ItemType discountedType) {
+        this.discountedType = discountedType;
+    }
+
+    public int getThreshold() {
+        return offerThreshold;
+    }
+
+    public void setThreshold(int threshold) {
+        this.offerThreshold = threshold;
     }
 }
