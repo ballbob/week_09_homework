@@ -25,4 +25,7 @@ public class Shopper {
         return this.basket.size();
     }
 
+    public void add(Product item){
+        basket.add(item);
+    }
 }
