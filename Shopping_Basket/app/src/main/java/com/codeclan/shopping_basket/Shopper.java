@@ -28,4 +28,8 @@ public class Shopper {
     public void add(Product item){
         basket.add(item);
     }
+
+    public void remove(Product item){
+        basket.remove(item);
+    }
 }
