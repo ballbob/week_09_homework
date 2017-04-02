@@ -29,7 +29,7 @@ public class Cashier {
     }
 
     public void handOver(Shopper shopper){
-
+        this.items.addAll(shopper.getBasket());
     }
 
 
