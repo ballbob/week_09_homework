@@ -66,7 +66,7 @@ public class Shopper {
     public void setThreshold(int threshold) {
         this.offerThreshold = threshold;
     }
-    
+
     public double basicTotal(){
         double sumTotal = 0;
         for (Product item : basket){

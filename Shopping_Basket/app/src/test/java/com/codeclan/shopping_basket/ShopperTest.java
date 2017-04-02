@@ -12,6 +12,7 @@ import static junit.framework.Assert.*;
 public class ShopperTest {
 
     Product pear;
+    Product mango;
     Product earphones;
     Shopper shopper;
     Shopper disloyalShopper;
@@ -19,6 +20,7 @@ public class ShopperTest {
     @Before
     public void before(){
         pear = new Product("pear", ItemType.FRUIT, 0.5);
+        mango = new Product("mango", ItemType.FRUIT, 1.5);
         earphones = new Product("earphones", ItemType.ELECTRICAL, 30);
         shopper = new Shopper("Kevin",true);
         disloyalShopper = new Shopper("Judas",false);
@@ -89,5 +91,13 @@ public class ShopperTest {
         shopper.add(pear);
         shopper.add(earphones);
         assertEquals(30.5,shopper.basicTotal());
+    }
+
+    @Test
+    public void canGetNumberOfType(){
+        shopper.add(pear);
+        shopper.add(mango);
+        assertEquals(2,shopper.numberOfType());
+
     }
 }
