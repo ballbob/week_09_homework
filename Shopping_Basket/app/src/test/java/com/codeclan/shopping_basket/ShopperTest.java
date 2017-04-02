@@ -19,7 +19,7 @@ public class ShopperTest {
     public void before(){
         pear = new Product("pear", ItemType.FRUIT, 0.5);
         earphones = new Product("earphones", ItemType.ELECTRICAL, 30);
-        shopper = new Shopper("Kevin");
+        shopper = new Shopper("Kevin",true);
     }
 
     @Test
@@ -55,6 +55,6 @@ public class ShopperTest {
 
     @Test
     public void canTestLoyalty(){
-        assertEquals(true,shopper.loyalty());
+        assertEquals(true,shopper.getLoyalty());
     }
 }

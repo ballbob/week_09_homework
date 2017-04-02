@@ -11,10 +11,12 @@ public class Shopper {
     private String name;
     private Product item;
     private ArrayList<Product> basket;
+    private boolean loyalty;
 
-    public Shopper(String name){
+    public Shopper(String name, boolean loyalty){
         this.name = name;
         this.basket = new ArrayList<Product>();
+        this.loyalty = loyalty;
     }
 
     public String getName(){
@@ -35,5 +37,9 @@ public class Shopper {
 
     public void empty(){
         basket.clear();
+    }
+
+    public boolean getLoyalty(){
+        return this.loyalty;
     }
 }
