@@ -94,6 +94,12 @@ public class Shopper {
         }
     }
 
+    public void loyaltyTotal(){
+        if (loyalty == true){
+            sumTotal = sumTotal * 0.98;
+        }
+    }
+
 
 
 }

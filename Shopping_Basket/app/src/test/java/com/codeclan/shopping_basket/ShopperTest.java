@@ -108,13 +108,32 @@ public class ShopperTest {
     }
 
     @Test
-    public void canChangePriceAtThreshold(){
+    public void canChangeCostAtThreshold(){
         shopper.add(pear);
         shopper.add(mango);
         shopper.add(earphones);
         shopper.basicTotal();
         shopper.thresholdTotal();
         assertEquals(28.8,shopper.getSumTotal(),0.001);
-
     }
+
+    @Test
+    public void canChangeCostOnLoyalty(){
+        shopper.add(pear);
+        shopper.add(mango);
+        shopper.add(earphones);
+        shopper.basicTotal();
+        shopper.loyaltyTotal();
+
+        disloyalShopper.add(pear);
+        disloyalShopper.add(mango);
+        disloyalShopper.add(earphones);
+        disloyalShopper.basicTotal();
+        disloyalShopper.loyaltyTotal();
+
+        assertEquals(31.36,shopper.getSumTotal(),0.001);
+        assertEquals(32,disloyalShopper.getSumTotal(),0.001);
+    }
+
+
 }
