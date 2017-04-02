@@ -1,5 +1,7 @@
 package com.codeclan.shopping_basket;
 
+import android.content.ClipData;
+
 import org.junit.*;
 
 import static junit.framework.Assert.assertEquals;
@@ -43,5 +45,11 @@ public class CashierTest {
         shopper.add(pear);
         cashier.handOver(shopper);
         assertEquals(2,cashier.numItems());
+    }
+
+    @Test
+    public void canGetAndSetDiscountedType(){
+        shopper.setDiscountedType(ItemType.FRUIT);
+        assertEquals(ItemType.FRUIT,shopper.getDiscountedType());
     }
 }

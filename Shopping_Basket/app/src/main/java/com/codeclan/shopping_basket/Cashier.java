@@ -32,5 +32,4 @@ public class Cashier {
         this.items.addAll(shopper.getBasket());
     }
 
-
 }
