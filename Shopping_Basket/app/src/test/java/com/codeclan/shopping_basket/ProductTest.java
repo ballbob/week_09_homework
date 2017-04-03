@@ -45,7 +45,7 @@ public class ProductTest {
     @Test
     public void canSetPrice(){
         pear.setPrice(3);
-        assertEquals(3,pear.getPrice());
+        assertEquals(3,pear.getPrice(),0.001);
     }
 
 

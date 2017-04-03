@@ -100,15 +100,15 @@ public class Shopper {
         }
     }
 
-//    public void discountedTypeTotal(){
-//        for (int i=0; i < basket.size(); i++){
-//            if (basket.get(i).getType() == discountedType){
-//                double priceAdd = basket.get(i).getPrice()/2;
-//                basket.remove(basket.get(i));
-//                sumTotal = sumTotal + priceAdd;
-//            }
-//        }
-//    }
+    public void discountedTypeTotal(){
+        for (int i=0; i < basket.size(); i++){
+            if (basket.get(i).getType() == discountedType){
+                item.setPrice(item.getPrice()/2);
+                basket.remove(basket.get(i));
+                sumTotal = sumTotal + priceAdd;
+            }
+        }
+    }
 
     public void adjustedTotal(){
 //        this.discountedTypeTotal();

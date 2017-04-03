@@ -29,7 +29,7 @@ public class Product {
         return this.price;
     }
 
-    public void setPrice(int newPrice){
+    public void setPrice(double newPrice){
         this.price = newPrice;
     }
 
