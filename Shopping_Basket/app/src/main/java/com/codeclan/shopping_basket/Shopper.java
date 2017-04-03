@@ -100,18 +100,16 @@ public class Shopper {
         }
     }
 
-    public void discountedTypeTotal(){
+    public void applyDiscountedType(){
         for (int i=0; i < basket.size(); i++){
             if (basket.get(i).getType() == discountedType){
-                item.setPrice(item.getPrice()/2);
-                basket.remove(basket.get(i));
-                sumTotal = sumTotal + priceAdd;
+                basket.get(i).setPrice(basket.get(i).getPrice()/2);
             }
         }
     }
 
     public void adjustedTotal(){
-//        this.discountedTypeTotal();
+        this.applyDiscountedType();
         this.basicTotal();
         this.loyaltyTotal();
         this.thresholdTotal();

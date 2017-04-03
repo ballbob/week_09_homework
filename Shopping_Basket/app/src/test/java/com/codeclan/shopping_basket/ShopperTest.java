@@ -13,6 +13,7 @@ public class ShopperTest {
 
     Product pear;
     Product mango;
+    Product apple;
     Product earphones;
     Shopper shopper;
     Shopper disloyalShopper;
@@ -21,6 +22,7 @@ public class ShopperTest {
     public void before(){
         pear = new Product("pear", ItemType.FRUIT, 0.5);
         mango = new Product("mango", ItemType.FRUIT, 1.5);
+        apple = new Product("apple",ItemType.FRUIT,2.3);
         earphones = new Product("earphones", ItemType.ELECTRICAL, 30);
         shopper = new Shopper("Kevin",true);
         disloyalShopper = new Shopper("Judas",false);
@@ -135,32 +137,38 @@ public class ShopperTest {
         assertEquals(32,disloyalShopper.getSumTotal(),0.001);
     }
 
-//    @Test
-//    public void canAddCostOfHalfPriceItems(){
-//        shopper.add(pear);
-//        shopper.add(mango);
-//        shopper.discountedTypeTotal();
-//
-//        assertEquals(1,shopper.getSumTotal(),0.001);
-//        assertEquals(0,shopper.numItems());
-//    }
+    @Test
+    public void canAddCostOfHalfPriceItems(){
+        shopper.add(pear);
+        shopper.add(mango);
+        shopper.add(apple);
+        shopper.applyDiscountedType();
+        shopper.basicTotal();
+
+        assertEquals(2.15,shopper.getSumTotal(),0.001);
+        assertEquals(3,shopper.numItems());
+    }
 
     @Test
-    public void canAdjustCostForLoyaltyAndThreshold(){
+    public void canAdjustCost(){
         shopper.empty();
         shopper.add(pear);
         shopper.add(mango);
         shopper.add(earphones);
         shopper.adjustedTotal();
 
+        assertEquals(25.67,shopper.getSumTotal(),0.001);
+    }
+
+    @Test
+    public void canAdjustCostForDisloyalCustomer(){
         disloyalShopper.empty();
         disloyalShopper.add(pear);
         disloyalShopper.add(mango);
         disloyalShopper.add(earphones);
         disloyalShopper.adjustedTotal();
 
-        assertEquals(28.22,shopper.getSumTotal(),0.01);
-        assertEquals(28.8,disloyalShopper.getSumTotal(),0.01);
+        assertEquals(27.9,disloyalShopper.getSumTotal(),0.001);
     }
 
 }
