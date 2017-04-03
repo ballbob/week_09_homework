@@ -111,6 +111,7 @@ public class Shopper {
 //    }
 
     public void adjustedTotal(){
+//        this.discountedTypeTotal();
         this.basicTotal();
         this.loyaltyTotal();
         this.thresholdTotal();

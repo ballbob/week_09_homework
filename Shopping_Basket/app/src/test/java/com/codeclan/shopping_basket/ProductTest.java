@@ -42,5 +42,11 @@ public class ProductTest {
         assertEquals(30,earphones.getPrice(),0.001);
     }
 
+    @Test
+    public void canSetPrice(){
+        pear.setPrice(3);
+        assertEquals(3,pear.getPrice());
+    }
+
 
 }
